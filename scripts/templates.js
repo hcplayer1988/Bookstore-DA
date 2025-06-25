@@ -3,7 +3,7 @@
 function getBookCardTemplate(i) {
     return `    <div class="layout_body">
                     <h2 id="book_name">${books[i].name}</h2>
-                    <img src="./assets/img/books.jpg" id="book_header_img" class="img_top">
+                    <img src="./assets/img/books.jpg" id="book_header_img" class="header_img">
 
                     <div class="seperation"><hr></div>
 
