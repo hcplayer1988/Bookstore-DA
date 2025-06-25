@@ -74,6 +74,16 @@ main {
     height: 400px !important;
 }
 
+.layout_body img {
+    width: 420px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.info .book .table {
+    width: 452px;
+}
+
 .input_comments_button {
     text-align: center;
 }
