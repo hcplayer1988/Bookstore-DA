@@ -50,13 +50,59 @@ function addComments(i) {                                   //dient dazu Kommmen
 }
 
 
-function updateNewComments(i) {                             // Diese Funktion aktualisiert den Kommentarbereich eines bestimmten Buches (oder Elements), indem sie den aktuellen Kommentar-HTML-Code in den Container mit der passenden ID einfügt
-    let updateComments = document.getElementById(`commentsContainer${i}`);  //
-    updateComments.innerHTML =getBookComments(i);           //
+function updateNewComments(i) {                             // Diese Funktion aktualisiert den Kommentarbereich eines bestimmten Buches, indem sie den aktuellen Kommentar-HTML-Code in den Container mit der passenden ID einfügt
+    let updateComments = document.getElementById(`commentsContainer${i}`);  // var ubdateComments wird erstellt = hier wird das html Element mmit der passenden id gesucht
+    updateComments.innerHTML = getBookComments(i);          // hier wird der Inhalt von updateComments geändert, mit innerhtml und der function getBookComments(i) mit demm index i zugewiesen
+}
+
+
+// Likes
+
+function likesCounter(i) {                                          // diese Function verwaltet die Likes auf der Website mit dem Pararmeter i der für ein bestimmtes Buch steht
+    let unlikedHeart = document.getElementById(`heartUnlike${i}`);  // var unlikedHeart wird erstellt, sucht die id heartUnlike${i} und setzt diese dem inhalt der id gleich
+    let likedHeart = document.getElementById(`heartLike${i}`);      // var likedHeart wird erstellt, sucht die id heartLike${i} und setzt diese dem inhalt der id gleich
+    let likesCount = document.getElementById(`likesCount${i}`);     // var likesCount wird erstellt, sucht die id likesCount${i} und setzt diese dem inhalt der id gleich
+
+    if (unlikedHeart.classList.contains("d_none")) {                // hier wird der aktuelle zustand der id durch contains geprüft -> in dem Fall ob die klasse d_none enthalten ist, also das gefällt mir nicht icon nicht Sichtbar ist
+        unlikedHeart.classList.remove("d_none");                    // wenn unliked nicht sichtbar ist wird die klasse hier entfernt
+        likedHeart.classList.add("d_none");                         // und hier wird die classe dem like icon hinzugefügt -> also ist das ausgefüllte Herz nicht sichtbar
+        books[i].likes--;                                           // hier wird die Anzahl der Likes im Buch mit dem index i umm eins verringert weil der user einen like entfernt hat
+        books[i].liked = false;                                     // danach wird das liked atribut im entsprechenden Buch wird hier auf false gesetzt
+    } else {                                                        // wenn das gefällt mir Icon nicht sichtbar ist also unliked sichtab ist dann ...
+        unlikedHeart.classList.add("d_none");                       // függe ich hier die klasse d_none dem Element unlikedHeart die klasse d_non hinzu und es wird unsichtbar...
+        likedHeart.classList.remove("d_none");                      // dann wird hiermit dem Elemment likedHeart die klasse d_none entfernt, also es sichjtbar gemacht
+        books[i].likes++;                                           // hier wird der like counter umm eins erhöht da der user ein like hinzugeügt hat
+        books[i].liked = true;                                      // zumm schluss wird hier bei dem Buch mit dem Index i das liked Attribut auf true gesetzt
+    }
+    likesCount.innerHTML = books[i].likes;                          // setzt den like counter des Buches mit dem inndex i auf den aktuellen Wert
+    saveToLocalStorage();                                           // ruft die Function auf welche die Like-Anzahl imm Local Storage speichert
+}
+
+
+checkLikedContent() {                                                   // diese Funktion wird aufgerufen um den aktuellen like-Status der Bücher zu prüfen  
+
+    for (let i = 0; i < books.length; i++) {                            // die schleife läuft durch das Array in dem alle Bücher enthalten sind wobei der index nach jedem durchlauf um eins erhöht wird bis die länge des Arrays kleiner als i ist
+        let unlikedHeart = document.getElementById(`heartUnlike${i}`);  // siehe --> function likesCounter ;)
+        let likedHeart = document.getElementById(`heartLike${i}`);      // siehe --> function likesCounter ;)
+        
+        if (books[i].liked) {                                           // Es wird geprüft ob das Buch mit dem index i bei liked den wert true hat. Wenn ja wird der if Block ausgeführt
+            unlikedHeart.classList.add("d_none");                       // hiermit wird dem Element unlikedHeart wird die klasse d_none hinzugefügt
+            likedHeart.classList.remove("d_none");                      // hiermit wird dem Element likedHeart wird die klasse d_none entfernt
+        } else {                                                        // wwenn der liked status des Buches mit dem index i false ist wird dieser else Block ausgeführt
+            unlikedHeart.classList.remove("d_none");                    // hier passiert dass gegennteil wie in dem if Block
+            likedHeart.classList.add("d_none");                         // hier passiert dass gegennteil wie in dem if Block
+        }
+    }
 }
 
 
 // locale speicherung
+
 getFromLocalStorage()  {
     let savedBooks = 
-} 
+}
+
+
+saveToLocalStorage() {
+
+}
