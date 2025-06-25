@@ -38,7 +38,16 @@ let books = [
       "price": 14.50,
       "publishedYear": 2021,
       "genre": "Fantasy",
-      "comments": []
+      "comments": [
+        {
+          "name": "BookQueen",
+          "comment": "Der vergessene Pfad entführt den Leser auf eine spannende und magische Reise voller Überraschungen!"
+        },
+        {
+          "name": "Aasterix",
+          "comment": "Dieses Buch fesselt von Anfang bis Ende mit seiner faszinierenden Atmosphäre und packenden Handlung!"
+        }
+      ]
     },
     {
       "name": "Die Farben des Himmels",
@@ -98,7 +107,16 @@ let books = [
       "price": 16.75,
       "publishedYear": 2017,
       "genre": "Fantasy",
-      "comments": []
+      "comments": [
+        {
+          "name": "KritikerFuchs",
+          "comment": "Der letzte Wächter ist ein Buch, das eine interessante Geschichte erzählt, ohne dabei besonders hervorzuheben."
+        },
+        {
+          "name": "LeseRatte",
+          "comment": "Der letzte Wächter ist ein faszinierendes Buch, das mit Spannung und Tiefe begeistert!"
+        }
+      ]
     },
     {
       "name": "Im Schatten des Mondes",
