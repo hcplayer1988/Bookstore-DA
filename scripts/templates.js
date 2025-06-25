@@ -1,4 +1,5 @@
 
+
 function getBookCardTemplate(i) {
     return `    <div class="layout_body">
                     <h5 id="book_name">${books[i].name}</h5>
