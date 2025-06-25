@@ -98,11 +98,14 @@ checkLikedContent() {                                                   // diese
 
 // locale speicherung
 
-getFromLocalStorage()  {
-    let savedBooks = 
+saveToLocalStorage() {                                              // diese function solll Daten im localStorage speichern und wird in der function addComments(i) aufgerufen um die Kommentare zu speicherr
+    localStorage.setItem("books", JSON.stringify(books));           // localStorage.setItem speichert ein schlüssel-wert-Paar im localStorage "books" ist der Key unter dem die daten gespeichert werden, JSON.stringify wandelt das Array in einen String, da nur strings im localStorage gespeichert werden
 }
 
 
-saveToLocalStorage() {
-
+getFromLocalStorage() {                                            // diese funktion soll die daten aus dem Local Storage laden und wird in der init function verwendet um die gespeicherten Daten beim Seitenload oder -reload abzurufen
+    let savedBooks = JSON.parse(localStorage.getItem("books"));     // hier wird die var savedBokks erstellt = da Daten im localStorage mmeist als string gespeichert werden ändert (parsed) dieser Befehl die Daten wieder zu einem JSON Array und speichert das Array in savedBooks
+    if(savedBooks) {                                                // diese Zeile prüft ob savedBooks einen Wert hat, also nicht null oder undefined ist, falls keine Daten vorhanden sind wird der if-Block ausgeführt
+        books = savedBooks;                                         // hier wird der die var books der var safedBoooks gleich gesetzt, alsoo die Daten gespeichert
+    }
 }
