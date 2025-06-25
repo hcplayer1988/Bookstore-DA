@@ -13,7 +13,7 @@ function getBookCardTemplate(i) {
                             <img id="heartUnlike${i}" class="icon_like d_none" onclick="likesCounter(${i})" src="./assets/icons/heart_empty.png">
                             <img id="heartLike${i}" class="icon_like" onclick="likesCounter(${i})" src="./assets/icons/heart_full.png">
 
-                            <h3 class="h3_style" id="likes_count${i}">${books[i].likes}</h3>
+                            <h3 class="h3_style" id="likesCount${i}">${books[i].likes}</h3>
                         </div>
                     </div>
 
@@ -46,4 +46,14 @@ function getBookCardTemplate(i) {
                         </div>
                     </div>
                 </div>`;
+}
+
+
+function getBookCommentsTemplate(i ,j) {
+    return `        <table class="comments_table">
+                        <tr>
+                            <td id="bookUserComments">${books[i].comments[j].name}</td>
+                            <td id ="bookComments">${books[i].comments[j].comment}</td>
+                        </tr>
+                    </table>`;
 }
