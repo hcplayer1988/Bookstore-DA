@@ -1,9 +1,7 @@
-
-
 function getBookCardTemplate(i) {
     return `    <div class="layout_body">
-                    <h2 id="book_name">${books[i].name}</h2>
-                    <img src="./assets/img/books.jpg" id="book_header_img" class="header_img">
+                    <h5 id="book_name">${books[i].name}</h5>
+                    <img src="./assets/img/books.jpg" id="book_header_img" class="img_top">
 
                     <div class="seperation"><hr></div>
 
@@ -14,7 +12,7 @@ function getBookCardTemplate(i) {
                             <img id="heartUnlike${i}" class="icon_like d_none" onclick="likesCounter(${i})" src="./assets/icons/heart_empty.png">
                             <img id="heartLike${i}" class="icon_like" onclick="likesCounter(${i})" src="./assets/icons/heart_full.png">
 
-                            <h3 class="h3_style" id="likesCount${i}">${books[i].likes}</h3>
+                            <h3 class="h3_style" id="likes_count${i}">${books[i].likes}</h3>
                         </div>
                     </div>
 
@@ -42,7 +40,7 @@ function getBookCardTemplate(i) {
                         </div>
                         <div class="seperation"><hr></div>
                         <div class="input_comments_button">
-                            <input id="send_comments${i}" type="text" placeholder="Bitte schreib ein Kommentar...">
+                            <input class="input" id="send_comments${i}" type="text" placeholder="Kommentar ...">
                             <img onclick="addComments(${i})" class="comment_btn" src="./assets/icons/send_message.png">
                         </div>
                     </div>

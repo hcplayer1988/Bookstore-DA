@@ -1,5 +1,12 @@
 @media (max-width: 570px) {
-
+    .nav_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 
     hr {
         width: 300px;
@@ -7,6 +14,8 @@
 
     .layout_body {
         width: 350px;
+        padding-left: 12px;
+        padding-right: 12px;
 
     }
 
@@ -23,7 +32,11 @@
     }
 
     .book_price_and_likes {
-        gap: 150px;
+        gap: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
     }
 
     input {
@@ -37,5 +50,106 @@
     td {
         font-size: 16px;
 
+    }
+}
+
+@media (max-width: 450px) {
+    hr {
+        width: 200px;
+    }
+
+    h5 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .navbar_text {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .layout_body img {
+        width: 200px;
+    }
+
+    .layout_body {
+        width: 320px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+     .layout_body h5 {
+        font-size: 20px;
+    }
+
+    .input_comments_button img {
+        width: 20px;
+    }
+
+    .book_price_and_likes {
+        gap: 80px;
+    }
+
+    .likes {
+        font-size: 20px;
+    }
+
+    .likes img {
+        width: 20px;
+    }
+
+    .info_book_table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    input {
+        width: 200px;
+        font-size: 16px;
+        height: 32px !important;
+        text-align: center;
+    }
+}
+
+@media (max-width: 350px) {
+    .nav_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .layout_body {
+        width: 250px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .info_book_table {
+        width: 200px;
+    }
+
+    .input_comments_button {
+        width: 220px;
+        gap: 5px;
+    }
+
+    .input_informations {
+        width: 217px;
+    }
+
+    .comments_container {
+        width: 217px;
+    }
+
+    .book_price_and_likes {
+        gap: 40px;
     }
 }

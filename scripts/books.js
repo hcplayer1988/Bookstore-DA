@@ -1,9 +1,20 @@
+// Title
+// icon
+// preis und like/dislike funktion
+//  autor:
+//  erscheinungsjahr:
+//  genre:
+// Kommentare:
+// Kommentare müssen angezeigt werden
+//   -> [Autor] : [Kommentar]
+// Kommentare hinzufügen
+
 let books = [
     {
       "name": "Die Geheimnisse des Ozeans",
       "author": "Clara Meer",
       "likes": 1250,
-      "liked": true,
+      "liked": false,
       "price": 19.99,
       "publishedYear": 2018,
       "genre": "Fantasy",
@@ -35,7 +46,7 @@ let books = [
       "author": "Maximilian Schwarz",
       "likes": 980,
       "liked": false,
-      "price": 14.99,
+      "price": 14.50,
       "publishedYear": 2021,
       "genre": "Fantasy",
       "comments": [
@@ -53,7 +64,7 @@ let books = [
       "name": "Die Farben des Himmels",
       "author": "Laura Blau",
       "likes": 1520,
-      "liked": true,
+      "liked": false,
       "price": 22.95,
       "publishedYear": 2019,
       "genre": "Romantik",
@@ -85,7 +96,7 @@ let books = [
       "author": "Alexander Weiss",
       "likes": 750,
       "liked": false,
-      "price": 17.99,
+      "price": 18.00,
       "publishedYear": 2020,
       "genre": "Science-Fiction",
       "comments": [
@@ -103,7 +114,7 @@ let books = [
       "name": "Der letzte Wächter",
       "author": "Sabine Grün",
       "likes": 1300,
-      "liked": true,
+      "liked": false,
       "price": 16.75,
       "publishedYear": 2017,
       "genre": "Fantasy",
@@ -123,7 +134,7 @@ let books = [
       "author": "Philipp Silber",
       "likes": 890,
       "liked": false,
-      "price": 12.49,
+      "price": 12.30,
       "publishedYear": 2022,
       "genre": "Science-Fiction",
       "comments": [
@@ -137,57 +148,4 @@ let books = [
         }
       ]
     },
-    {
-      "name": "Jenseits der Sterne",
-      "author": "Oliver Schwarz",
-      "likes": 1450,
-      "liked": true,
-      "price": 21.95,
-      "publishedYear": 2015,
-      "genre": "Science-Fiction",
-      "comments": [
-        {
-          "name": "Leser123",
-          "comment": "Ein fesselndes Abenteuer, das mich von Anfang bis Ende mitgerissen hat."
-        }
-      ]
-    },
-    {
-      "name": "Das verborgene Königreich",
-      "author": "Elena Gold",
-      "likes": 920,
-      "liked": false,
-      "price": 17.49,
-      "publishedYear": 2020,
-      "genre": "Fantasy",
-      "comments": [
-        {
-          "name": "Bookworm92",
-          "comment": "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat."
-        }
-      ]
-    },
-    {
-      "name": "Liebe in Zeiten des Krieges",
-      "author": "Emilia Rot",
-      "likes": 1800,
-      "liked": true,
-      "price": 19.99,
-      "publishedYear": 2016,
-      "genre": "Romantik",
-      "comments": [
-        {
-          "name": "Bibliophile23",
-          "comment": "Die Fantasiewelt war so lebendig, ich konnte das Buch kaum aus der Hand legen."
-        },
-        {
-          "name": "StorySeeker",
-          "comment": "Eine unglaublich berührende Liebesgeschichte, die mich tief bewegt hat."
-        },
-        {
-          "name": "SciFiExplorer",
-          "comment": "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig."
-        }
-      ]
-    }
-  ]
+  ];
